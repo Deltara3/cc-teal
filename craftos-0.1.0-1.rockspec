@@ -16,7 +16,9 @@ build = {
     install = {
         lua = {
             ["craftos"] = "types/craftos.d.tl",
-            ["craftos.core"] = "types/craftos/core.d.tl"
+            ["craftos.core"] = "types/craftos/core.d.tl",
+            ["craftos.colors"] = "types/craftos/colors.d.tl",
+            ["craftos.colours"] = "types/craftos/colours.d.tl"
         }
     }
 }
