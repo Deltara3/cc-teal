@@ -1,5 +1,5 @@
 # craftos.tl
-Teal definitions for CraftOS, because strict typing is awesome!
+Teal definitions for CraftOS, because static typing is awesome!
 
 ## Usage
 > [!NOTE]
