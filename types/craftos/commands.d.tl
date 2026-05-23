@@ -1,4 +1,4 @@
-local type BlockInfo = record 
+global type BlockInfo = record 
     name: string
     state: {string: any}
     tags: {string: boolean} | nil
@@ -7,7 +7,7 @@ local type BlockInfo = record
     mapColour: integer | nil
 end
 
-local type EntityInfo = record
+global type EntityInfo = record
     name: string
     displayName: string | nil
     health: number | nil

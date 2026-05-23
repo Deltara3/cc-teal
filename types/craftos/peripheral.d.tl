@@ -39,7 +39,7 @@ local type ItemGroup = record
     displayName: string
 end
 
-local type ItemInfo = record
+global type ItemInfo = record
     name: string
     displayName: string
     count: integer
