@@ -1,3 +1,4 @@
 require("craftos.core")
 require("craftos.colors")
 require("craftos.colours")
+require("craftos.commands")
