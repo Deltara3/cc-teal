@@ -23,7 +23,8 @@ build = {
             ["craftos.disk"] = "types/craftos/disk.d.tl",
             ["craftos.fs"] = "types/craftos/fs.d.tl",
             ["craftos.gps"] = "types/craftos/gps.d.tl",
-            ["craftos.help"] = "types/craftos/help.d.tl"
+            ["craftos.help"] = "types/craftos/help.d.tl",
+            ["craftos.http"] = "types/craftos/http.d.tl"
         }
     }
 }
