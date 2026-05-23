@@ -31,7 +31,8 @@ build = {
             ["craftos.os"] = "types/craftos/os.d.tl",
             ["craftos.paintutils"] = "types/craftos/paintutils.d.tl",
             ["craftos.parallel"] = "types/craftos/parallel.d.tl",
-            ["craftos.peripheral"] = "types/craftos/peripheral.d.tl"
+            ["craftos.peripheral"] = "types/craftos/peripheral.d.tl",
+            ["craftos.pocket"] = "types/craftos/pocket.d.tl"
         }
     }
 }
