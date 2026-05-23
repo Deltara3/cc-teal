@@ -36,7 +36,8 @@ build = {
             ["craftos.rednet"] = "types/craftos/rednet.d.tl",
             ["craftos.redstone"] = "types/craftos/redstone.d.tl",
             ["craftos.settings"] = "types/craftos/settings.d.tl",
-            ["craftos.shell"] = "types/craftos/shell.d.tl"
+            ["craftos.shell"] = "types/craftos/shell.d.tl",
+            ["craftos.term"] = "types/craftos/term.d.tl"
         }
     }
 }
