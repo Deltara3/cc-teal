@@ -34,7 +34,8 @@ build = {
             ["craftos.peripheral"] = "types/craftos/peripheral.d.tl",
             ["craftos.pocket"] = "types/craftos/pocket.d.tl",
             ["craftos.rednet"] = "types/craftos/rednet.d.tl",
-            ["craftos.redstone"] = "types/craftos/redstone.d.tl"
+            ["craftos.redstone"] = "types/craftos/redstone.d.tl",
+            ["craftos.settings"] = "types/craftos/settings.d.tl"
         }
     }
 }
