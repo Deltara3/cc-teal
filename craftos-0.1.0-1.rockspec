@@ -25,7 +25,8 @@ build = {
             ["craftos.gps"] = "types/craftos/gps.d.tl",
             ["craftos.help"] = "types/craftos/help.d.tl",
             ["craftos.http"] = "types/craftos/http.d.tl",
-            ["craftos.io"] = "types/craftos/io.d.tl"
+            ["craftos.io"] = "types/craftos/io.d.tl",
+            ["craftos.keys"] = "types/craftos/keys.d.tl"
         }
     }
 }
