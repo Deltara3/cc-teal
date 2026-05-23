@@ -9,7 +9,7 @@ $ luarocks install https://raw.githubusercontent.com/Deltara3/craftos.tl/refs/he
 ## Usage
 Set the following in your `tlconfig.lua` (or pass to `tl` directly):
 - `global_env_def` to `craftos`
-- `gen_target` to `5.1`.
+- `gen_target` to `5.2`.
 
 ## License
 This repository is licensed under the MIT License.
