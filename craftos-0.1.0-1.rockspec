@@ -39,7 +39,8 @@ build = {
             ["craftos.shell"] = "types/craftos/shell.d.tl",
             ["craftos.term"] = "types/craftos/term.d.tl",
             ["craftos.textutils"] = "types/craftos/textutils.d.tl",
-            ["craftos.turtle"] = "types/craftos/turtle.d.tl"
+            ["craftos.turtle"] = "types/craftos/turtle.d.tl",
+            ["craftos.vector"] = "types/craftos/vector.d.tl"
         }
     }
 }
