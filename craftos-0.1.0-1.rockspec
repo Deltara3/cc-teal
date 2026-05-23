@@ -28,7 +28,8 @@ build = {
             ["craftos.io"] = "types/craftos/io.d.tl",
             ["craftos.keys"] = "types/craftos/keys.d.tl",
             ["craftos.multishell"] = "types/craftos/multishell.d.tl",
-            ["craftos.os"] = "types/craftos/os.d.tl"
+            ["craftos.os"] = "types/craftos/os.d.tl",
+            ["craftos.paintutils"] = "types/craftos/paintutils.d.tl"
         }
     }
 }
