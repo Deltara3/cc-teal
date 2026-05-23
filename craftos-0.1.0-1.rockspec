@@ -40,7 +40,8 @@ build = {
             ["craftos.term"] = "types/craftos/term.d.tl",
             ["craftos.textutils"] = "types/craftos/textutils.d.tl",
             ["craftos.turtle"] = "types/craftos/turtle.d.tl",
-            ["craftos.vector"] = "types/craftos/vector.d.tl"
+            ["craftos.vector"] = "types/craftos/vector.d.tl",
+            ["craftos.window"] = "types/craftos/window.d.tl"
         }
     }
 }
