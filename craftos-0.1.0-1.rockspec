@@ -30,7 +30,8 @@ build = {
             ["craftos.multishell"] = "types/craftos/multishell.d.tl",
             ["craftos.os"] = "types/craftos/os.d.tl",
             ["craftos.paintutils"] = "types/craftos/paintutils.d.tl",
-            ["craftos.parallel"] = "types/craftos/parallel.d.tl"
+            ["craftos.parallel"] = "types/craftos/parallel.d.tl",
+            ["craftos.peripheral"] = "types/craftos/peripheral.d.tl"
         }
     }
 }
