@@ -21,7 +21,8 @@ build = {
             ["craftos.colours"] = "types/craftos/colours.d.tl",
             ["craftos.commands"] = "types/craftos/commands.d.tl",
             ["craftos.disk"] = "types/craftos/disk.d.tl",
-            ["craftos.fs"] = "types/craftos/fs.d.tl"
+            ["craftos.fs"] = "types/craftos/fs.d.tl",
+            ["craftos.gps"] = "types/craftos/gps.d.tl"
         }
     }
 }
