@@ -92,7 +92,8 @@ global type ModemPeripheral = record is IPeripheral
     open: function(channel: integer)
     isOpen: function(channel: integer): boolean
     close: function(channel: integer)
-    closeAll: function(channel: integer, replyChannel: integer, payload: any)
+    closeAll: function()
+    transmit: function(channel: integer, replyChannel: integer, payload: any)
     isWireless: function(): boolean
 end
 
@@ -100,7 +101,8 @@ global type WiredModemPeripheral = record is IPeripheral
     open: function(channel: integer)
     isOpen: function(channel: integer): boolean
     close: function(channel: integer)
-    closeAll: function(channel: integer, replyChannel: integer, payload: any)
+    closeAll: function()
+    transmit: function(channel: integer, replyChannel: integer, payload: any)
     isWireless: function(): boolean
     getNamesRemote: function(): {string}
     isPresentRemote: function(name: string): boolean
