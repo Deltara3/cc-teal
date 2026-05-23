@@ -19,7 +19,8 @@ build = {
             ["craftos.core"] = "types/craftos/core.d.tl",
             ["craftos.colors"] = "types/craftos/colors.d.tl",
             ["craftos.colours"] = "types/craftos/colours.d.tl",
-            ["craftos.commands"] = "types/craftos/commands.d.tl"
+            ["craftos.commands"] = "types/craftos/commands.d.tl",
+            ["craftos.disk"] = "types/craftos/disk.d.tl"
         }
     }
 }
