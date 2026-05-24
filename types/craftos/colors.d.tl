@@ -20,8 +20,8 @@ global record colors
     combine: function(...: Color): Color
     subtract: function(colors: Color, ...: Color): Color
     test: function(colors: Color, color: Color): boolean
-    packRGB: function(integer, integer, integer): integer
-    unpackRGB: function(integer): integer, integer, integer
-    toBlit: function(Color): string
-    fromBlit: function(string): Color | nil
+    packRGB: function(r: integer, g: integer, b: integer): integer
+    unpackRGB: function(rgb: integer): integer, integer, integer
+    toBlit: function(color: Color): string
+    fromBlit: function(hex: string): Color | nil
 end

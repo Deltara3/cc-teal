@@ -18,10 +18,10 @@ global record colours
     red: Colour
     black: Colour
     combine: function(...: Colour): Colour
-    subtract: function(Colours: Colour, ...: Colour): Colour
-    test: function(Colours: Colour, Colour: Colour): boolean
-    packRGB: function(integer, integer, integer): integer
-    unpackRGB: function(integer): integer, integer, integer
-    toBlit: function(Colour): string
-    fromBlit: function(string): Colour | nil
+    subtract: function(colours: Colour, ...: Colour): Colour
+    test: function(colours: Colour, Colour: Colour): boolean
+    packRGB: function(r: integer, g: integer, b: integer): integer
+    unpackRGB: function(rgb: integer): integer, integer, integer
+    toBlit: function(colour: Colour): string
+    fromBlit: function(hex: string): Colour | nil
 end
