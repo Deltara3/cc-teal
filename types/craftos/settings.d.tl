@@ -1,10 +1,10 @@
-local type SettingOptions = record
+local record SettingOptions
     description: string | nil
     default: any | nil
     type: string | nil
 end
 
-local type SettingInfo = record
+local record SettingInfo
     description: string | nil
     default: any | nil
     type: string | nil

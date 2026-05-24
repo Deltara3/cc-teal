@@ -1,4 +1,4 @@
-global type Vector = record
+global record Vector
     x: number
     y: number
     z: number

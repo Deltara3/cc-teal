@@ -1,6 +1,6 @@
 require("craftos.term")
 
-local type Window = record is ITerminal
+local record Window is ITerminal
     getLine: function(y: integer): string, string, string
     setVisible: function(visible: boolean)
     isVisible: function(): boolean

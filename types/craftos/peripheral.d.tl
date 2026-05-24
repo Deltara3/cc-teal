@@ -21,25 +21,25 @@ local enum Instrument
     "pling"
 end
 
-local type Enchantment = record
+local record Enchantment
     name: string
     displayName: string
     level: integer
 end
 
-local type Effect = record
+local record Effect
     name: string
     displayName: string
     duration: number | nil
     potency: integer | nil
 end
 
-local type ItemGroup = record
+local record ItemGroup
     id: string
     displayName: string
 end
 
-global type ItemInfo = record
+global record ItemInfo
     name: string
     displayName: string
     count: integer
@@ -60,13 +60,13 @@ end
 
 global interface IPeripheral end
 
-global type CommandPeripheral = record is IPeripheral
+global record CommandPeripheral is IPeripheral
     getCommand: function(): string
     setCommand: function(command: string)
     runCommand: function(): boolean, string | nil
 end
 
-global type ComputerPeripheral = record is IPeripheral
+global record ComputerPeripheral is IPeripheral
     turnOn: function()
     shutdown: function()
     reboot: function()
@@ -75,7 +75,7 @@ global type ComputerPeripheral = record is IPeripheral
     getLabel: function(): string | nil
 end
 
-global type DrivePeripheral = record is IPeripheral
+global record DrivePeripheral is IPeripheral
     isDiskPresent: function(): boolean
     getDiskLabel: function(): string | nil
     setDiskLabel: function(label?: string)
@@ -89,7 +89,7 @@ global type DrivePeripheral = record is IPeripheral
     getDiskID: function(): integer | nil
 end
 
-global type ModemPeripheral = record is IPeripheral
+global record ModemPeripheral is IPeripheral
     open: function(channel: integer)
     isOpen: function(channel: integer): boolean
     close: function(channel: integer)
@@ -98,7 +98,7 @@ global type ModemPeripheral = record is IPeripheral
     isWireless: function(): boolean
 end
 
-global type WiredModemPeripheral = record is IPeripheral
+global record WiredModemPeripheral is IPeripheral
     open: function(channel: integer)
     isOpen: function(channel: integer): boolean
     close: function(channel: integer)
@@ -114,12 +114,12 @@ global type WiredModemPeripheral = record is IPeripheral
     getNameLocal: function(): string | nil
 end
 
-global type MonitorPeripheral = record is IPeripheral, ITerminal
+global record MonitorPeripheral is IPeripheral, ITerminal
     getTextScale: function(scale: number)
     getTextScale: function(): number
 end
 
-global type PrinterPeripheral = record is IPeripheral
+global record PrinterPeripheral is IPeripheral
     write: function(text: string | number | integer)
     getCursorPos: function(): integer, integer
     setCursorPos: function(x: integer, y: integer)
@@ -131,7 +131,7 @@ global type PrinterPeripheral = record is IPeripheral
     getPaperLevel: function(): integer
 end
 
-global type RedstonePeripheral = record is IPeripheral
+global record RedstonePeripheral is IPeripheral
     setOutput: function(side: string, on: boolean)
     getOutput: function(side: string): boolean
     getInput: function(side: string): boolean
@@ -147,7 +147,7 @@ global type RedstonePeripheral = record is IPeripheral
     testBundledInput: function(side: string, mask: integer): boolean
 end
 
-global type SpeakerPeripheral = record is IPeripheral
+global record SpeakerPeripheral is IPeripheral
     playNote: function(
         instrument: Instrument,
         volume?: number,
@@ -162,12 +162,12 @@ global type SpeakerPeripheral = record is IPeripheral
     stop: function()
 end
 
-global type EnergyPeripheral = record is IPeripheral
+global record EnergyPeripheral is IPeripheral
     getEnergy: function(): integer
     getEnergyCapacity: function(): integer
 end
 
-global type FluidPeripheral = record is IPeripheral
+global record FluidPeripheral is IPeripheral
     tanks: function(): {integer: {string: any}}
     pushFluid: function(
         toName: string,
@@ -181,7 +181,7 @@ global type FluidPeripheral = record is IPeripheral
     ): integer
 end
 
-global type InventoryPeripheral = record is IPeripheral
+global record InventoryPeripheral is IPeripheral
     size: function(): integer
     list: function(): {integer: {string: any}}
     getItemDetail: function(slot: integer): ItemInfo | nil

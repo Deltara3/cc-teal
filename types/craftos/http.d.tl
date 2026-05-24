@@ -1,4 +1,4 @@
-local type RequestOptions = record
+local record RequestOptions
     url: string
     body: string | nil
     headers: {string: string} | nil
@@ -8,13 +8,13 @@ local type RequestOptions = record
     timeout: number | nil
 end
 
-local type WebsocketOptions = record
+local record WebsocketOptions
     url: string
     headers: {string: string} | nil
     timeout: number | nil
 end
 
-local type Response = record
+local record Response
     getResponseCode: function(): integer
     getResponseHeaders: function(): {string: string}
     read: function(count?: integer): string | integer | nil
@@ -23,7 +23,7 @@ local type Response = record
     close: function()
 end
 
-local type Websocket = record
+local record Websocket
     getResponseHeaders: function(): {string: string}
     receive: function(timeout?: number): string | nil, boolean | string
     send: function(message: string, binary?: boolean)

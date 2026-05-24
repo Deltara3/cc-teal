@@ -1,17 +1,17 @@
 require("craftos.colors")
 
-local type SerializeOptions = record
+local record SerializeOptions
     compact: boolean | nil
     allow_repetitions: boolean | nil
 end
 
-local type SerializeJSONOptions = record
+local record SerializeJSONOptions
     nbt_style: boolean | nil
     unicode_strings: boolean | nil
     allow_repetitions: boolean | nil
 end
 
-local type UnserializeJSONOptions = record
+local record UnserializeJSONOptions
     nbt_style: boolean | nil
     parse_null: boolean | nil
     parse_empty_array: boolean | nil

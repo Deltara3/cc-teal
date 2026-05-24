@@ -1,4 +1,4 @@
-local type Date = record
+local record Date
     year: integer
     month: integer
     day: integer

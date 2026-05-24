@@ -1,4 +1,4 @@
-local type CompleteOptions = record
+local record CompleteOptions
     include_files: boolean | nil
     include_dirs: boolean | nil
     include_hidden: boolean | nil
@@ -31,7 +31,7 @@ local enum SeekWhence
     "end"
 end
 
-local type ReadHandle = record
+local record ReadHandle
     read: function(count?: integer): string | integer | nil
     readAll: function(): string | nil
     readLine: function(withTrailing?: boolean): string | nil
@@ -42,7 +42,7 @@ local type ReadHandle = record
     close: function()
 end
 
-local type WriteHandle = record
+local record WriteHandle
     write: function(contents: string)
     write: function(charcode: integer)
     writeLine: function(text: string)
@@ -54,7 +54,7 @@ local type WriteHandle = record
     close: function()
 end
 
-local type ReadWriteHandle = record
+local record ReadWriteHandle
     read: function(count?: integer): string | integer | nil
     readAll: function(): string | nil
     readLine: function(withTrailing?: boolean): string | nil
@@ -69,7 +69,7 @@ local type ReadWriteHandle = record
     close: function()
 end
 
-local type FileAttributes = record
+local record FileAttributes
     size: integer
     isDir: boolean
     isReadOnly: boolean
