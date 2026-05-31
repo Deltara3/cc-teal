@@ -4,15 +4,15 @@ global record rednet
     MAX_ID_CHANNELS: integer
     open: function(modem: string)
     close: function(modem?: string)
-    isOpen: function(modem?: string)
+    isOpen: function(modem?: string): boolean
     send: function(
         recipient: integer,
         message: any,
         protocol?: string
     ): boolean
-    broadcast: function(message: string, protocol?: string)
+    broadcast: function(message: any, protocol?: string)
     receive: function(
-        filter?: string,
+        protocol_filter?: string,
         timeout?: number
     ): integer | nil, any | nil, string | nil
     host: function(protocol: string, hostname: string)

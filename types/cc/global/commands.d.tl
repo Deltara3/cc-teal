@@ -1,22 +1,8 @@
-global record BlockInfo
-    name: string
-    state: {string: any}
-    tags: {string: boolean} | nil
-    nbt: {string: any}
-    mapColor: integer | nil
-    mapColour: integer | nil
-end
-
-global record EntityInfo
-    name: string
-    displayName: string | nil
-    health: number | nil
-    maxHealth: number | nil
-    tags: {string: boolean} | nil
-end
+require("cc.minecraft.block")
+require("cc.minecraft.entity")
 
 global record commands
-    exec: function(command: string): boolean, {string}, integer | nil
+    exec: function(command: string): boolean, {string}, number | nil
     execAsync: function(command: string): integer
     list: function(...: string): {string}
     getDimension: function(): string

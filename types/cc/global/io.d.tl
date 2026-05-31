@@ -1,8 +1,4 @@
-local enum SeekWhence
-    "set"
-    "cur"
-    "end"
-end
+require("cc.global.fs")
 
 local enum OpenMode
     "r"
@@ -26,13 +22,13 @@ local enum ReadFormat
     "*a"
 end
 
-local type Handle = record
+local record Handle
     close: function(): boolean | nil, string | nil
     flush: function()
     lines: function(...: any): (function(): string | nil)
-    read: function(...: ReadFormat): string | nil
-    seek: function(whence?: SeekWhence, offset: integer): integer
-    write: function(...: string | number | integer): Handle | nil, string | nil
+    read: function(...: ReadFormat): string | nil...
+    seek: function(whence?: SeekWhence, offset?: integer): integer
+    write: function(...: string | number| integer): Handle | nil, string | nil
 end
 
 global record io
@@ -45,7 +41,7 @@ global record io
     lines: function(filename?: string, ...: any): (function(): string | nil)
     open: function(filename: string, mode?: OpenMode): Handle | nil, string | nil
     output: function(file?: Handle | string): Handle
-    read: function(...: ReadFormat): string | nil
+    read: function(...: ReadFormat): string | nil...
     type: function(obj: Handle): string | nil
     write: function(...: string)
 end

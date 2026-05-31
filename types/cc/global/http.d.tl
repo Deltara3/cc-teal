@@ -1,7 +1,9 @@
+local type Headers = {string: string}
+
 local record RequestOptions
     url: string
     body: string | nil
-    headers: {string: string} | nil
+    headers: Headers | nil
     binary: boolean | nil
     method: string | nil
     redirect: boolean | nil
@@ -10,13 +12,13 @@ end
 
 local record WebsocketOptions
     url: string
-    headers: {string: string} | nil
+    headers: Headers | nil
     timeout: number | nil
 end
 
 local record Response
     getResponseCode: function(): integer
-    getResponseHeaders: function(): {string: string}
+    getResponseHeaders: function(): Headers
     read: function(count?: integer): string | integer | nil
     readAll: function(): string | nil
     readLine: function(withTrailing?: boolean): string | nil
@@ -24,7 +26,7 @@ local record Response
 end
 
 local record Websocket
-    getResponseHeaders: function(): {string: string}
+    getResponseHeaders: function(): Headers
     receive: function(timeout?: number): string | nil, boolean | string
     send: function(message: string, binary?: boolean)
     close: function()
@@ -33,7 +35,7 @@ end
 global record http
     get: function(
         url: string,
-        headers?: {string: string},
+        headers?: Headers,
         binary?: boolean
     ): Response | nil, string | nil, Response | nil
     get: function(
@@ -42,7 +44,7 @@ global record http
     post: function(
         url: string,
         body: string,
-        headers?: {string: string},
+        headers?: Headers,
         binary?: boolean
     ): Response | nil, string | nil, Response | nil
     post: function(
@@ -51,7 +53,7 @@ global record http
     request: function(
         url: string,
         body?: string,
-        headers?: {string: string},
+        headers?: Headers,
         binary?: boolean
     ): Response | nil, string | nil, Response | nil
     request: function(
@@ -59,11 +61,11 @@ global record http
     ): Response | nil, string | nil, Response | nil
     checkURLAsync: function(url: string): boolean, string | nil
     checkURL: function(url: string): boolean, string | nil
-    websocketAsync: function(url: string, headers: {string: string})
+    websocketAsync: function(url: string, headers: Headers)
     websocketAsync: function(request: WebsocketOptions)
     websocket: function(
         url: string,
-        headers: {string: string}
+        headers: Headers
     ): Websocket | boolean, string | nil
     websocket: function(
         request: WebsocketOptions

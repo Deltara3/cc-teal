@@ -1,4 +1,4 @@
-require("craftos.term")
+require("cc.global.term")
 
 local record Window is ITerminal
     getLine: function(y: integer): string, string, string

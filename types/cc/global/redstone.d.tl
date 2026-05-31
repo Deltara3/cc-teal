@@ -1,5 +1,4 @@
-global record redstone
-    getSides: function(): {string}
+global interface IRedstone
     setOutput: function(side: string, on: boolean)
     getOutput: function(side: string): boolean
     getInput: function(side: string): boolean
@@ -13,4 +12,12 @@ global record redstone
     getBundledOutput: function(side: string): integer
     getBundledInput: function(side: string): integer
     testBundledInput: function(side: string, mask: integer): boolean
+end
+
+global record redstone is IRedstone
+    getSides: function(): {string}
+end
+
+global record rs is IRedstone
+    getSides: function(): {string}
 end

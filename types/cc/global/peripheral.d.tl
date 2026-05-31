@@ -1,62 +1,7 @@
-require("craftos.colors")
-require("craftos.colours")
-require("craftos.term")
-
-local enum Instrument
-    "harp"
-    "basedrum"
-    "snare"
-    "hat"
-    "bass"
-    "flute"
-    "bell"
-    "guitar"
-    "chime"
-    "xylophone"
-    "iron_xylophone"
-    "cow_bell"
-    "didgeridoo"
-    "bit"
-    "banjo"
-    "pling"
-end
-
-local record Enchantment
-    name: string
-    displayName: string
-    level: integer
-end
-
-local record Effect
-    name: string
-    displayName: string
-    duration: number | nil
-    potency: integer | nil
-end
-
-local record ItemGroup
-    id: string
-    displayName: string
-end
-
-global record ItemInfo
-    name: string
-    displayName: string
-    count: integer
-    maxCount: integer
-    damage: integer | nil
-    maxDamage: integer | nil
-    durability: number | nil
-    unbreakable: boolean | nil
-    nbt: string | nil
-    tags: {string: boolean} | nil
-    lore: {string} | nil
-    enchantments: {Enchantment} | nil
-    potionEffects: {Effect} | nil
-    itemGroups: {ItemGroup} | nil
-    mapColor: integer | nil
-    mapColour: integer | nil
-end
+require("cc.global.redstone")
+require("cc.global.term")
+require("cc.minecraft.instrument")
+require("cc.minecraft.item")
 
 global interface IPeripheral end
 
@@ -115,7 +60,7 @@ global record WiredModemPeripheral is IPeripheral
 end
 
 global record MonitorPeripheral is IPeripheral, ITerminal
-    getTextScale: function(scale: number)
+    setTextScale: function(scale: number)
     getTextScale: function(): number
 end
 
@@ -131,21 +76,7 @@ global record PrinterPeripheral is IPeripheral
     getPaperLevel: function(): integer
 end
 
-global record RedstonePeripheral is IPeripheral
-    setOutput: function(side: string, on: boolean)
-    getOutput: function(side: string): boolean
-    getInput: function(side: string): boolean
-    setAnalogOutput: function(side: string, value: integer)
-    setAnalogueOutput: function(side: string, value: integer)
-    getAnalogOutput: function(side: string): integer
-    getAnalogueOutput: function(side: string): integer
-    getAnalogInput: function(side: string): integer
-    getAnalogueInput: function(side: string): integer
-    setBundledOutput: function(side: string, output: integer)
-    getBundledOutput: function(side: string): integer
-    getBundledInput: function(side: string): integer
-    testBundledInput: function(side: string, mask: integer): boolean
-end
+global record RedstonePeripheral is IPeripheral, IRedstone end
 
 global record SpeakerPeripheral is IPeripheral
     playNote: function(

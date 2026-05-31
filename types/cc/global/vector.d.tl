@@ -1,14 +1,11 @@
 global record Vector
-    x: number
-    y: number
-    z: number
-    add: function(other: Vector): Vector
-    sub: function(other: Vector): Vector
+    add: function(o: Vector): Vector
+    sub: function(o: Vector): Vector
     mul: function(factor: number): Vector
     div: function(factor: number): Vector
     unm: function(): Vector
-    dot: function(other: Vector): Vector
-    cross: function(other: Vector): Vector
+    dot: function(o: Vector): number
+    cross: function(o: Vector): Vector
     length: function(): number
     normalize: function(): Vector
     round: function(tolerance?: number): Vector
@@ -17,5 +14,5 @@ global record Vector
 end
 
 global record vector
-    new: function(x: number, y: number, z: number): Vector
+    new: function(x: number, y: number, x: number)
 end

@@ -1,5 +1,5 @@
-require("craftos.peripheral")
-require("craftos.commands")
+require("cc.global.peripheral")
+require("cc.minecraft.block")
 
 global record turtle
     craft: function(limit?: integer): boolean, string | nil

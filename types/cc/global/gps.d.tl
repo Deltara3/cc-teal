@@ -3,5 +3,5 @@ global record gps
     locate: function(
         timeout?: number,
         debug?: boolean
-    ): integer | nil, integer | nil, integer | nil
+    ): number | nil, number | nil, number | nil
 end

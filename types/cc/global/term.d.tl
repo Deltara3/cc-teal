@@ -1,5 +1,4 @@
-require("craftos.colors")
-require("craftos.colours")
+require("cc.global.colors")
 
 global interface ITerminal
     write: function(text: string)

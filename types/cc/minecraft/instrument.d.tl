@@ -1,0 +1,18 @@
+global enum Instrument
+    "harp"
+    "basedrum"
+    "snare"
+    "hat"
+    "bass"
+    "flute"
+    "bell"
+    "guitar"
+    "chime"
+    "xylophone"
+    "iron_xylophone"
+    "cow_bell"
+    "didgeridoo"
+    "bit"
+    "banjo"
+    "pling"
+end

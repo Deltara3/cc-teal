@@ -25,13 +25,13 @@ local enum OpenReadWriteMode
     "ab+"
 end
 
-local enum SeekWhence
+global enum SeekWhence
     "set"
     "cur"
     "end"
 end
 
-local record ReadHandle
+local interface ReadableHandle
     read: function(count?: integer): string | integer | nil
     readAll: function(): string | nil
     readLine: function(withTrailing?: boolean): string | nil
@@ -42,7 +42,7 @@ local record ReadHandle
     close: function()
 end
 
-local record WriteHandle
+local interface WriteableHandle
     write: function(contents: string)
     write: function(charcode: integer)
     writeLine: function(text: string)
@@ -54,20 +54,9 @@ local record WriteHandle
     close: function()
 end
 
-local record ReadWriteHandle
-    read: function(count?: integer): string | integer | nil
-    readAll: function(): string | nil
-    readLine: function(withTrailing?: boolean): string | nil
-    seek: function(
-        whence?: SeekWhence,
-        offset?: integer
-    ): integer | nil, string | nil
-    write: function(contents: string)
-    write: function(charcode: integer)
-    writeLine: function(text: string)
-    flush: function()
-    close: function()
-end
+local record ReadHandle is ReadableHandle end
+local record WriteHandle is WriteableHandle end
+local record ReadWriteHandle is ReadableHandle, WriteableHandle end
 
 local record FileAttributes
     size: integer

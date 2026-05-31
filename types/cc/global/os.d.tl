@@ -10,9 +10,15 @@ local record Date
     isdst: boolean
 end
 
+local enum Locale
+    "ingame"
+    "utc"
+    "local"
+end
+
 global record os
     loadAPI: function(path: string): boolean
-    unloadAPI: function(path: string)
+    unloadAPI: function(name: string)
     pullEvent: function(filter?: string): string, any...
     pullEventRaw: function(filter?: string): string, any...
     sleep: function(time: number)
@@ -31,8 +37,8 @@ global record os
     computerLabel: function(): string | nil
     setComputerLabel: function(label?: string)
     clock: function(): integer
-    time: function(locale?: string | table): integer
-    day: function(locale?: string): integer
-    epoch: function(locale?: string): integer
+    time: function(locale?: Locale | table): integer
+    day: function(locale?: Locale): integer
+    epoch: function(locale?: Locale): integer
     date: function(format?: string, time?: integer): string | Date
 end

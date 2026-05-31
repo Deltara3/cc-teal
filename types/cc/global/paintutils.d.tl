@@ -1,29 +1,33 @@
-require("craftos.colors")
+require("cc.global.colors")
 
 global record paintutils
     parseImage: function(image: string): {{integer}}
     loadImage: function(path: string): {{integer}} | nil
-    drawPixel: function(xPos: integer, yPos: integer, color?: Color)
+    drawPixel: function(xPos: integer, yPos: integer, colour?: Colour)
     drawLine: function(
         startX: integer,
         startY: integer,
         endX: integer,
         endY: integer,
-        color?: Color
+        colour?: Colour
     )
     drawBox: function(
         startX: integer,
         startY: integer,
         endX: integer,
         endY: integer,
-        color?: Color
+        colour?: Colour
     )
     drawFilledBox: function(
         startX: integer,
         startY: integer,
         endX: integer,
         endY: integer,
-        color?: Color
+        colour?: Colour
     )
-    drawImage: function(image: {{integer}}, xPos: integer, yPos: integer)
+    drawImage: function(
+        image: {{integer}},
+        xPos: integer,
+        yPos: integer
+    )
 end

@@ -1,7 +1,7 @@
 global record disk
     isPresent: function(name: string): boolean
     getLabel: function(name: string): string | nil
-    setLabel: function(name: string, label: string | nil)
+    setLabel: function(name: string, label?: string)
     hasData: function(name: string): boolean
     getMountPath: function(name: string): string | nil
     hasAudio: function(name: string): boolean
