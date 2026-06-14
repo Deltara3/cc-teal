@@ -1,6 +1,12 @@
 package = "cc-teal"
 version = "0.1.0-1"
 
+description = {
+    summary = "Teal definitions for CraftOS, because static typing is awesome!",
+    homepage = "https://github.com/Deltara3/cc-teal",
+    license = "MIT"
+}
+
 source = {
     url = "git+https://github.com/Deltara3/cc-teal.git"
 }
