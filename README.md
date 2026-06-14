@@ -1,13 +1,13 @@
-# craftos.tl
+# cc-teal
 Teal definitions for CraftOS, because static typing is awesome!
 
 > [!NOTE]
-> This covers just the API for CraftOS.
+> Currently this covers just the API for CraftOS.
 > Addons and CraftOS-PC are unsupported.
 
 ## Install
 ```bash
-$ luarocks install https://raw.githubusercontent.com/Deltara3/craftos.tl/refs/heads/main/craftos-0.1.0-1.rockspec
+$ luarocks install cc-teal
 ```
 
 ## Usage

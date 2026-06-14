@@ -1,8 +1,8 @@
-package = "craftos"
+package = "cc-teal"
 version = "0.1.0-1"
 
 source = {
-    url = "git+https://github.com/Deltara3/craftos.tl.git"
+    url = "git+https://github.com/Deltara3/cc-teal.git"
 }
 
 dependencies = {
