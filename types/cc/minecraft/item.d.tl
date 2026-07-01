@@ -17,7 +17,7 @@ global record ItemInfo
     durability: number | nil
     unbreakable: boolean | nil
     nbt: string | nil
-    tags: {string: boolean} | nil
+    tags: {string: boolean}
     lore: {string} | nil
     enchantments: {Enchantment} | nil
     potionEffects: {Effect} | nil
