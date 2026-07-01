@@ -1,7 +1,7 @@
 global record EntityInfo
     name: string
     displayName: string
-    health: number
-    maxHealth: number
+    health: integer
+    maxHealth: integer
     tags: {string: boolean}
 end
