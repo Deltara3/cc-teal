@@ -21,7 +21,7 @@ global record ItemInfo
     lore: {string} | nil
     enchantments: {Enchantment} | nil
     potionEffects: {Effect} | nil
-    itemGroups: {ItemGroup} | nil
+    itemGroups: {ItemGroup}
     mapColor: Color | nil
     mapColour: Colour | nil
 end
